@@ -1,0 +1,17 @@
+{% extends 'base_clone/main.html' %}
+{% block content %}
+<div class="header-bar">
+    <h1>Login</h1>
+</div>
+<div class="card-body">
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="login">
+    </form>
+    <p>Don't have an account...you sure can create one <a href="{% url 'register' %}">Register</a></p>
+</div>
+
+
+
+{% endblock content %}
